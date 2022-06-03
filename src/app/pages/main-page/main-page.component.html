@@ -1,0 +1,12 @@
+<div class="container my-5">
+    <h1>Breaking Bad</h1>
+    <hr />
+    <input type="text" class="form-control" placeholder="Busca tu personaje" (input)="filter($event)">
+
+</div>
+
+<div class="row">
+    <div *ngFor ='let personaje of personajes' class="col-xl-4 col-sm-6 col-xs-12">
+        <app-card [personaje]="personaje"></app-card>
+    </div>
+</div>
