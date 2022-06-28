@@ -1,12 +1,17 @@
 <div class="container my-5">
     <h1>Breaking Bad</h1>
     <hr />
-    <input type="text" class="form-control" placeholder="Busca tu personaje" (input)="filter($event)">
-
-</div>
-
-<div class="container row mx-auto align-self-start">
-    <div *ngFor ='let personaje of personajes' class="col-xl-4 col-sm-6 col-xs-12">
-        <app-card [personaje]="personaje"></app-card>
+    <div class="input-group mb-3">
+        <span class="input-group-text input" id="basic-addon1"><span class="material-symbols-outlined">
+            search
+            </span></span>
+            <input type="text" class="container form-control input" placeholder="Busca tu personaje" (input)="filter($event)">
+    </div>
+    
+    
+    <div class="container row mx-auto align-self-start">
+        <div *ngFor ='let personaje of personajes' class="col-xl-4 col-sm-6 col-xs-12">
+            <app-card [personaje]="personaje"></app-card>
+        </div>
     </div>
 </div>
